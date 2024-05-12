@@ -150,6 +150,7 @@ CVC - Performs Circuit Validity Check
 ![image](https://github.com/Nawras-Ahamed/SOC_PHYDESIGN_FLOW/assets/50738659/f5bcd8a7-b400-4b48-8461-978f60726b3e)
 
 Now we can see that there is a directory created(check timestamp) under which we could navigate to the runs directory where we can find the ```merged.lef``` 
+
 ![image](https://github.com/Nawras-Ahamed/SOC_PHYDESIGN_FLOW/assets/50738659/9f4a59d8-3558-45fc-a0f5-4f6c62475c00)
 
 Inside the ```merged.lef```
