@@ -136,14 +136,27 @@ CVC - Performs Circuit Validity Check
 
 ![image](https://github.com/Nawras-Ahamed/SOC_PHYDESIGN_FLOW/assets/50738659/27dc9631-ec33-42d5-8126-f1cae063d21d)
 
-flow.tcl
+### flow.tcl
+
 ![image](https://github.com/Nawras-Ahamed/SOC_PHYDESIGN_FLOW/assets/50738659/665a4343-c183-4efd-98f6-0ace33887b7e)
 
-
-
-
-Initialize the environment
+**Initialize the environment**
 
     package require openlane 0.9
+
+### The picorv32a Directory
+    prep -design picorv32a
+![image](https://github.com/Nawras-Ahamed/SOC_PHYDESIGN_FLOW/assets/50738659/e600df33-05c7-4326-acbe-2cd11e2558a6)
+![image](https://github.com/Nawras-Ahamed/SOC_PHYDESIGN_FLOW/assets/50738659/f5bcd8a7-b400-4b48-8461-978f60726b3e)
+
+Now we can see that there is a directory created(check timestamp) under which we could navigate to the runs directory where we can find the ```merged_lef.py``` 
+![image](https://github.com/Nawras-Ahamed/SOC_PHYDESIGN_FLOW/assets/50738659/9f4a59d8-3558-45fc-a0f5-4f6c62475c00)
+
+
+
+    
+    
+
+    
 
 
