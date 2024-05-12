@@ -170,7 +170,11 @@ Now we can see that there is a directory created(check timestamp) under which we
 
   ![image](https://github.com/Nawras-Ahamed/SOC_PHYDESIGN_FLOW/assets/50738659/2937f4e2-f619-414c-a11d-ee30f1eb8ace)
 
-  Below is the synthesis netlist inside the synthesis directory
+  **Below is the synthesis netlist inside the synthesis directory**
   ![image](https://github.com/Nawras-Ahamed/SOC_PHYDESIGN_FLOW/assets/50738659/ae047862-f160-4fc8-879f-5f22de3bdf69)
+
+  **can see the Std cell mapping in the netlist file**
+  ![image](https://github.com/Nawras-Ahamed/SOC_PHYDESIGN_FLOW/assets/50738659/92318ca6-6561-41b4-be58-4d2ff5195357)
+
 
 
