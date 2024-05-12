@@ -136,5 +136,14 @@ CVC - Performs Circuit Validity Check
 
 ![image](https://github.com/Nawras-Ahamed/SOC_PHYDESIGN_FLOW/assets/50738659/27dc9631-ec33-42d5-8126-f1cae063d21d)
 
+flow.tcl
+![image](https://github.com/Nawras-Ahamed/SOC_PHYDESIGN_FLOW/assets/50738659/665a4343-c183-4efd-98f6-0ace33887b7e)
+
+
+
+
+Initialize the environment
+
+    package require openlane 0.9
 
 
