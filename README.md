@@ -27,6 +27,7 @@ The flow performs all ASIC implementation steps from RTL all the way down to GDS
 OpenLane abstracts the underlying open source utilities, and allows users to configure all their behavior with just a single configuration file.
 There are Two modes of operation: automonomous and interactive
 
+![1](https://github.com/Nawras-Ahamed/SOC_PHYDESIGN_FLOW/assets/50738659/2b255544-dfbc-484f-b0bf-6a8def7b211f)
 ### Synthesis
 
 yosys/abc - Perform RTL synthesis and technology mapping.
@@ -119,22 +120,23 @@ CVC - Performs Circuit Validity Check
     make test
     #On make test if everything is installed properly you will get the below message
     Basic test passed
+</details>
 
+</details>
 
+### USING OPENLANE
 
-
-
-  
-
-
+    Move to the directory where Openlane is Installed
+    cd Desktop/work/tools/openlane_working_dir/openlane
     
-</details>
+    Start the Docker container and enter the OpenLANE shell:
+    
+    docker
+    ./flow.tcl -interactive
+
+![image](https://github.com/Nawras-Ahamed/SOC_PHYDESIGN_FLOW/assets/50738659/03ce2b65-093a-4fa1-9e21-9deb61240de3)
 
 
 
-
-![1](https://github.com/Nawras-Ahamed/SOC_PHYDESIGN_FLOW/assets/50738659/2b255544-dfbc-484f-b0bf-6a8def7b211f)
-
-</details>
 
 ![1](https://github.com/Nawras-Ahamed/SOC_PHYDESIGN_FLOW/assets/50738659/2b255544-dfbc-484f-b0bf-6a8def7b211f)
