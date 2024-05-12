@@ -30,55 +30,55 @@ There are Two modes of operation: automonomous and interactive
 ![1](https://github.com/Nawras-Ahamed/SOC_PHYDESIGN_FLOW/assets/50738659/2b255544-dfbc-484f-b0bf-6a8def7b211f)
 ### Synthesis
 
-yosys/abc - Perform RTL synthesis and technology mapping.
+`yosys/abc` - Perform RTL synthesis and technology mapping.
 
-OpenSTA - Performs static timing analysis on the resulting netlist to generate timing reports
+`OpenSTA` - Performs static timing analysis on the resulting netlist to generate timing reports
 
 ### Floorplaning
 
-init_fp - Defines the core area for the macro as well as the rows (used for placement) and the tracks (used for routing)
+`init_fp` - Defines the core area for the macro as well as the rows (used for placement) and the tracks (used for routing)
 
-ioplacer - Places the macro input and output ports
+`ioplacer` - Places the macro input and output ports
 
-pdngen - Generates the power distribution network
+`pdngen` - Generates the power distribution network
 
-tapcell - Inserts welltap and decap cells in the floorplan
+`tapcell` - Inserts welltap and decap cells in the floorplan
 
 ### Placement
 
-RePLace - Performs global placement
+`RePLace` - Performs global placement
 
-Resizer - Performs optional optimizations on the design
+`Resizer` - Performs optional optimizations on the design
 
-OpenDP - Performs detailed placement to legalize the globally placed components
+`OpenDP` - Performs detailed placement to legalize the globally placed components
 
 ### CTS
 
-TritonCTS - Synthesizes the clock distribution network (the clock tree)
+`TritonCTS` - Synthesizes the clock distribution network (the clock tree)
 
 ### Routing
 
-FastRoute - Performs global routing to generate a guide file for the detailed router
+`FastRoute` - Performs global routing to generate a guide file for the detailed router
 
-TritonRoute - Performs detailed routing
+`TritonRoute` - Performs detailed routing
 
-OpenRCX - Performs SPEF extraction
+`OpenRCX` - Performs SPEF extraction
 
 ### Tapeout
 
-Magic - Streams out the final GDSII layout file from the routed def
+`Magic` - Streams out the final GDSII layout file from the routed def
 
-KLayout - Streams out the final GDSII layout file from the routed def as a back-up
+`KLayout` - Streams out the final GDSII layout file from the routed def as a back-up
 
-# Signoff
+### Signoff
 
-Magic - Performs DRC Checks & Antenna Checks
+`Magic` - Performs DRC Checks & Antenna Checks
 
-KLayout - Performs DRC Checks
+`KLayout` - Performs DRC Checks
 
-Netgen - Performs LVS Checks
+`Netgen` - Performs LVS Checks
 
-CVC - Performs Circuit Validity Check
+`CVC` - Performs Circuit Validity Check
 
 <details>
 <summary>OPENSOURCE EDA TOOLS</summary>
@@ -189,7 +189,7 @@ Printing statistics.
    Number of memories:               0
    Number of memory bits:            0
    Number of processes:              0
-   Number of cells:              14876
+   ##### Number of cells:              14876 #####
      sky130_fd_sc_hd__a2111o_2       1
      sky130_fd_sc_hd__a211o_2       35
      sky130_fd_sc_hd__a211oi_2      60
@@ -213,7 +213,7 @@ Printing statistics.
      sky130_fd_sc_hd__buf_1       1656
      sky130_fd_sc_hd__buf_2          8
      sky130_fd_sc_hd__conb_1        42
-     sky130_fd_sc_hd__dfxtp_2     1613
+    ##### sky130_fd_sc_hd__dfxtp_2     1613  #####
      sky130_fd_sc_hd__inv_2       1615
      sky130_fd_sc_hd__mux2_1      1224
      sky130_fd_sc_hd__mux2_2         2
