@@ -149,14 +149,21 @@ CVC - Performs Circuit Validity Check
 ![image](https://github.com/Nawras-Ahamed/SOC_PHYDESIGN_FLOW/assets/50738659/e600df33-05c7-4326-acbe-2cd11e2558a6)
 ![image](https://github.com/Nawras-Ahamed/SOC_PHYDESIGN_FLOW/assets/50738659/f5bcd8a7-b400-4b48-8461-978f60726b3e)
 
-Now we can see that there is a directory created(check timestamp) under which we could navigate to the runs directory where we can find the ```merged_lef.py``` 
+Now we can see that there is a directory created(check timestamp) under which we could navigate to the runs directory where we can find the ```merged.lef``` 
 ![image](https://github.com/Nawras-Ahamed/SOC_PHYDESIGN_FLOW/assets/50738659/9f4a59d8-3558-45fc-a0f5-4f6c62475c00)
 
 
 
-    
-    
+  Inside the ```merged.lef```
+  ![image](https://github.com/Nawras-Ahamed/SOC_PHYDESIGN_FLOW/assets/50738659/cb8a1527-e82d-4987-9dfd-a015fb929fa4)
+  We can seee the specs about the vias metal layer cuts and the dimensions
 
+
+  ### Synthesis
+
+      run_synthesis
+
+  ![image](https://github.com/Nawras-Ahamed/SOC_PHYDESIGN_FLOW/assets/50738659/4082a566-185e-454a-9c24-2c2ab0c8d92e)
     
 
 
