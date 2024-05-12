@@ -164,6 +164,13 @@ Now we can see that there is a directory created(check timestamp) under which we
       run_synthesis
 
   ![image](https://github.com/Nawras-Ahamed/SOC_PHYDESIGN_FLOW/assets/50738659/4082a566-185e-454a-9c24-2c2ab0c8d92e)
-    
+
+  After Running the synthesis command we can see the update inside the design directory of openlane where we have the picorv32a (check the modified date)
+  ```/Desktop/work/tools/openlane_working_dir/openlane/designs/picorv32a/runs/12-05_11/results/synthesis```
+
+  ![image](https://github.com/Nawras-Ahamed/SOC_PHYDESIGN_FLOW/assets/50738659/2937f4e2-f619-414c-a11d-ee30f1eb8ace)
+
+  Below is the synthesis netlist inside the synthesis directory
+  ![image](https://github.com/Nawras-Ahamed/SOC_PHYDESIGN_FLOW/assets/50738659/ae047862-f160-4fc8-879f-5f22de3bdf69)
 
 
