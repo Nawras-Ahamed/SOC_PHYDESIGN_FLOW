@@ -134,9 +134,7 @@ CVC - Performs Circuit Validity Check
     docker
     ./flow.tcl -interactive
 
-![image](https://github.com/Nawras-Ahamed/SOC_PHYDESIGN_FLOW/assets/50738659/03ce2b65-093a-4fa1-9e21-9deb61240de3)
+![image](https://github.com/Nawras-Ahamed/SOC_PHYDESIGN_FLOW/assets/50738659/27dc9631-ec33-42d5-8126-f1cae063d21d)
 
 
 
-
-![1](https://github.com/Nawras-Ahamed/SOC_PHYDESIGN_FLOW/assets/50738659/2b255544-dfbc-484f-b0bf-6a8def7b211f)
