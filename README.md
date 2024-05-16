@@ -1,4 +1,4 @@
-![image](https://github.com/Nawras-Ahamed/SOC_PHYDESIGN_FLOW/assets/50738659/7e40fa97-d49f-4b64-b0b3-eef55c5e7ff8)# NASSCOM-VSD SoC Design Program
+# NASSCOM-VSD SoC Design Program
 
 <details>
 <summary>A PREREQ</summary>
