@@ -396,3 +396,16 @@ ___________________________________
 ```~/Desktop/work/tools/openlane_working_dir/openlane/designs/picorv32a/runs/16-05_05-22/logs/placement/8-resizer.log```
 ![image](https://github.com/Nawras-Ahamed/SOC_PHYDESIGN_FLOW/assets/50738659/f2b27172-4969-4079-9a9c-5fb5ad1bdb0b)
 
+
+```bash
+magic -T /home/vsduser/Desktop/work/tools/openlane_working_dir/pdks/sky130A/libs.tech/magic/sky130A.tech lef read ../../tmp/merged.lef def read picorv32a.placement.def &
+```
+![image](https://github.com/Nawras-Ahamed/SOC_PHYDESIGN_FLOW/assets/50738659/cb1dcb36-6d40-4464-9546-594a1fb438a3)
+
+![image](https://github.com/Nawras-Ahamed/SOC_PHYDESIGN_FLOW/assets/50738659/eecd8a25-75ad-412f-b12b-a6ee58ae2717)
+
+![image](https://github.com/Nawras-Ahamed/SOC_PHYDESIGN_FLOW/assets/50738659/9e68d2ac-065a-46a0-88c7-9e851a6b355a)
+
+
+
+
