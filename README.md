@@ -489,5 +489,36 @@ inside the `sky130_inv.ext` **WE CAN WITNESS THE EXTRACTED NETLIST INFORMATION**
 ![image](https://github.com/Nawras-Ahamed/SOC_PHYDESIGN_FLOW/assets/50738659/9536df2b-fae7-4b37-99ab-7b898cd6bdf7)
 
 
+**RISE TIME**
+```math
+x0 = 2.16151e-09, y0 = 0.659639 \         \   
+
+x0 = 2.20386e-09, y0 = 2.63012
+```
+Rise time transition 20% to 80% - time value = 40ps
+
+**FALL TIME**
+
+```math
+x0 = 4.04043e-09, y0 = 2.64059 \
+x0 = 4.06827e-09, y0 = 0.662766
+```
+Fall time transition 20% to 80% - time value = 33ps
+
+**CELL RISE DELAY**
+Calculated at 50% of VDD = 35ps
+```math
+x0 = 2.15e-09, y0 = 1.65189 \
+
+x0 = 2.185e-09, y0 = 1.65094
+```
+
+**CELL FALL DELAY**
+Calculated at 50% of VDD = 2ps
+```math
+x0 = 4.06051e-09, y0 = 1.65147
+
+x0 = 4.05492e-09, y0 = 1.65
+```
 
 
