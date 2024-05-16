@@ -320,4 +320,27 @@ In the openlane interactive mode
 **Inside the picorv32a.floorplan.def**
 ![image](https://github.com/Nawras-Ahamed/SOC_PHYDESIGN_FLOW/assets/50738659/6aecb454-1068-4f9b-a269-e148bd43b707)
 
+**OBSERVATIONS FROM THE FLOORPLAN RESULTS**
+
+```math
+Given\ 1000\ Unit\ Distance = 1\ Micron
+```
+```math
+Die\ width = 660685 \ in \ unit \  distance
+```
+```math
+Die\ height = 671405 \ in \ unit \  distance
+```
+```math
+Distance = \frac{Value Distance}{1000} 
+```
+```math
+Die\ width = \frac{660685}{1000} = 660.685\ Microns
+```
+```math
+Die\ height = \frac{671405}{1000} = 671.405\ Microns
+```
+```math
+Area\ of\ die = 660.685 * 671.405 = 443587.212425\ Sq\ Microns
+```
 
