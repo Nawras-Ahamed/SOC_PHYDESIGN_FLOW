@@ -1,4 +1,4 @@
-# NASSCOM-VSD SoC Design Program
+![image](https://github.com/Nawras-Ahamed/SOC_PHYDESIGN_FLOW/assets/50738659/7e40fa97-d49f-4b64-b0b3-eef55c5e7ff8)# NASSCOM-VSD SoC Design Program
 
 <details>
 <summary>A PREREQ</summary>
@@ -407,5 +407,25 @@ magic -T /home/vsduser/Desktop/work/tools/openlane_working_dir/pdks/sky130A/libs
 ![image](https://github.com/Nawras-Ahamed/SOC_PHYDESIGN_FLOW/assets/50738659/9e68d2ac-065a-46a0-88c7-9e851a6b355a)
 
 
+### TRYING DIFFERENT SWITCHES
 
+**WITH THE DEFAULT CONFIGURATION**
+![image](https://github.com/Nawras-Ahamed/SOC_PHYDESIGN_FLOW/assets/50738659/39c58e23-252b-4b8c-b71d-e741a50e21de)
+
+In the openlane interactive window 
+```bash
+set ::env(FP_IO_MODE) 2
+```
+
+inside the `~/Desktop/work/tools/openlane_working_dir/openlane/designs/picorv32a/runs/16-05_05-22/results/floorplan`
+
+```bash
+magic -T /home/vsduser/Desktop/work/tools/openlane_working_dir/pdks/sky130A/libs.tech/magic/sky130A.tech lef read ../../tmp/merged.lef def read picorv32a.floorplan.def &
+```
+![image](https://github.com/Nawras-Ahamed/SOC_PHYDESIGN_FLOW/assets/50738659/f140f4f0-36b2-48c2-973c-7243c6377842)
+
+We can See that the pins aren't like before it was and completely rearranged now and not in equidistant.
+___________________________________________________
+
+### LIBRARY CELL DESIGN USING MAGIC AND NGSPICE
 
