@@ -331,9 +331,7 @@ Die\ width = 660685 \ in \ unit \  distance
 ```math
 Die\ height = 671405 \ in \ unit \  distance
 ```
-```math
-Distance = \frac{Value Distance}{1000} 
-```
+
 ```math
 Die\ width = \frac{660685}{1000} = 660.685\ Microns
 ```
@@ -343,4 +341,32 @@ Die\ height = \frac{671405}{1000} = 671.405\ Microns
 ```math
 Area\ of\ die = 660.685 * 671.405 = 443587.212425\ Sq\ Microns
 ```
+
+### Layout in Magic
+We need a lef and def file along with pdk's techfile into order to map accordingly and view the floorplan in the Magic
+```bash
+magic -T /home/vsduser/Desktop/work/tools/openlane_working_dir/pdks/sky130A/libs.tech/magic/sky130A.tech lef read ../../tmp/merged.lef def read picorv32a.floorplan.def &
+```
+
+
+![image](https://github.com/Nawras-Ahamed/SOC_PHYDESIGN_FLOW/assets/50738659/246d4bde-bb5a-4147-886c-7182fc04f5a2)
+
+
+**Decap cells**
+![image](https://github.com/Nawras-Ahamed/SOC_PHYDESIGN_FLOW/assets/50738659/945c3d1a-2fe6-4847-9b64-6d97b76d23fb)
+
+**An overview of decap cells tap cells** 
+![image](https://github.com/Nawras-Ahamed/SOC_PHYDESIGN_FLOW/assets/50738659/c64121fc-3ae2-4133-b8be-845688c346f9)
+
+```
+Click on any cell and select it, Then press "S" which will open a tkcon window and type "what" to get a brief note on the selected cell" 
+```
+
+![image](https://github.com/Nawras-Ahamed/SOC_PHYDESIGN_FLOW/assets/50738659/eb46600d-e896-450d-b849-c87d75de041c)
+
+
+**Standard cells placed at the bottom of the layout**
+![image](https://github.com/Nawras-Ahamed/SOC_PHYDESIGN_FLOW/assets/50738659/1ec2757a-dbe7-4da3-9268-e750afdbd444)
+
+
 
