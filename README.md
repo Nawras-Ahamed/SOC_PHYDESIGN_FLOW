@@ -495,28 +495,28 @@ x0 = 2.16151e-09, y0 = 0.659639 \         \
 
 x0 = 2.20386e-09, y0 = 2.63012
 ```
-Rise time transition 20% to 80% - time value = 40ps
+Rise time transition 20% to 80% - time value = 43ps
 
 **FALL TIME**
 
 ```math
-x0 = 4.04043e-09, y0 = 2.64059 \
+x0 = 4.04043e-09, y0 = 2.64059 \  \
 x0 = 4.06827e-09, y0 = 0.662766
 ```
-Fall time transition 20% to 80% - time value = 33ps
+Fall time transition 20% to 80% - time value = 28ps
 
 **CELL RISE DELAY**
 Calculated at 50% of VDD = 35ps
 ```math
-x0 = 2.15e-09, y0 = 1.65189 \
+x0 = 2.15e-09, y0 = 1.65189 \  \
 
 x0 = 2.185e-09, y0 = 1.65094
 ```
 
 **CELL FALL DELAY**
-Calculated at 50% of VDD = 2ps
+Calculated at 50% of VDD = 20ps
 ```math
-x0 = 4.06051e-09, y0 = 1.65147
+x0 = 4.06051e-09, y0 = 1.65147 \  \
 
 x0 = 4.05492e-09, y0 = 1.65
 ```
