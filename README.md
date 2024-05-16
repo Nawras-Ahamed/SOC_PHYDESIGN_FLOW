@@ -124,7 +124,20 @@ There are Two modes of operation: automonomous and interactive
 
 </details>
 
+### SKY130 PDK
+There are seven standard cell libraries provided directly by the SkyWater Technology foundry available for use on SKY130 designs, which differ in intended applications and come in three separate cell heights
+
+```<Process name> _ <Library Source Abbreviation> _ <Library Type Abbreviation> <Library Name>```	
+
+sky130_fd_sc_hd.lib:
+
+Sky130 : process technology.
+fd : SkyWater Foundry.
+sc : Digital Standard Cells.
+hd : High density.
+
 ### USING OPENLANE
+
 
     Move to the directory where Openlane is Installed
     cd Desktop/work/tools/openlane_working_dir/openlane
@@ -252,4 +265,16 @@ Printing statistics.
    Chip area for module '\picorv32a': 147712.918400
   ```
 
+
+ ### Synthesis Results
+
+ 
+```math
+Flop\ Ratio = \frac{Number\ of\ D\ Flip\ Flops}{Total\ Number\ of\ Cells}  = \frac{1613}{14876} = 0.1084
+```
+```math
+DFF's\ percent  = Flop\ Ratio * 100 = 0.1084* 100 = 10.84\ \%
+```
+
+ 
 
