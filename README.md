@@ -297,5 +297,27 @@ This gives a documentation the various settings are user can use by help of the 
  (FP_IO MODE) 0 - matching mode
  (FP_IO MODE) 1 - equidistance positioning
 
+In the openlane interactive mode
+```run_floorplan```
+![image](https://github.com/Nawras-Ahamed/SOC_PHYDESIGN_FLOW/assets/50738659/ba478d2b-8b7c-45f3-932f-40463c6604e4)
 
- 
+**floorplan.def was updated as shown in the below image**
+
+![image](https://github.com/Nawras-Ahamed/SOC_PHYDESIGN_FLOW/assets/50738659/070a0874-3160-4ddd-92a6-6aafb2cbdbb1)
+
+### REVIEWING THE FLOORPLAN REPORTS
+
+```bash
+~/Desktop/work/tools/openlane_working_dir/openlane/designs/picorv32a/runs/16-05_05-22/results/floorplan
+```
+
+![image](https://github.com/Nawras-Ahamed/SOC_PHYDESIGN_FLOW/assets/50738659/3614d7b3-1990-4499-8dc4-0235bc0d2565)
+
+**picorv32a.floorplan.def.png**
+
+![image](https://github.com/Nawras-Ahamed/SOC_PHYDESIGN_FLOW/assets/50738659/8a90ea4b-a979-438c-a0cc-687fc532264e)
+
+**Inside the picorv32a.floorplan.def**
+![image](https://github.com/Nawras-Ahamed/SOC_PHYDESIGN_FLOW/assets/50738659/6aecb454-1068-4f9b-a269-e148bd43b707)
+
+
