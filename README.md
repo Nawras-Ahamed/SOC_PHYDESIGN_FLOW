@@ -264,6 +264,12 @@ Printing statistics.
 
    Chip area for module '\picorv32a': 147712.918400
   ```
+**Inside The OpenSTA reports**
+
+```bash
+~/Desktop/work/tools/openlane_working_dir/openlane/designs/picorv32a/runs/12-05_11-17/reports/synthesis$ less 2-opensta.rpt
+```
+![image](https://github.com/Nawras-Ahamed/SOC_PHYDESIGN_FLOW/assets/50738659/4e75101a-1ac0-47b4-8c16-03f6c3a75b09)
 
 
  ### Synthesis Results
@@ -276,5 +282,19 @@ Flop\ Ratio = \frac{Number\ of\ D\ Flip\ Flops}{Total\ Number\ of\ Cells}  = \fr
 DFF's\ percent  = Flop\ Ratio * 100 = 0.1084* 100 = 10.84\ \%
 ```
 
- 
+### Floorplanning with OpenLane
 
+**What's inside the README.md of Config files?**
+
+![image](https://github.com/Nawras-Ahamed/SOC_PHYDESIGN_FLOW/assets/50738659/0aa8ca1b-142e-4362-b82b-46ea2370a64e)
+
+This gives a documentation the various settings are user can use by help of the switches.
+
+**I'll focus on the (FP_IO MODE)**
+
+**Inside the floorplan.tcl**
+
+![image](https://github.com/Nawras-Ahamed/SOC_PHYDESIGN_FLOW/assets/50738659/f11a1c5c-1c2b-4469-b910-5d0e3aa86425)
+
+ (FP_IO MODE) 0 - pin positioning is random 
+ (FP_IO MODE) 1 - equidistance positioning
