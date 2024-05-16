@@ -429,3 +429,55 @@ ___________________________________________________
 
 ### LIBRARY CELL DESIGN USING MAGIC AND NGSPICE
 
+```bash
+git clone https://github.com/nickson-jose/vsdstdcelldesign.git
+```
+In the working directory clone the above github repo
+
+![image](https://github.com/Nawras-Ahamed/SOC_PHYDESIGN_FLOW/assets/50738659/dae41510-7fd9-4839-a3e8-8f6e8591802c)
+
+To view the CMOS Inverter layout
+```bash
+magic -T sky130A.tech sky130_inv.mag &
+```
+
+Below are the brief view on the various diffusion and metal layer of the cmos inverter.The area of interest is highlighted with a thin white bounding box and to know about the details "What" command is used in tkcon.
+As a CMOS Inverter is Intended to be, The source of NMOS,PMOS are connected to the power rails and the drains are connected together from which the output is taken from a contact.
+
+**POLY LAYER**
+![image](https://github.com/Nawras-Ahamed/SOC_PHYDESIGN_FLOW/assets/50738659/cb3413be-f8ef-4e7d-bcae-afd08b93530f)
+
+**NMOS**
+
+![image](https://github.com/Nawras-Ahamed/SOC_PHYDESIGN_FLOW/assets/50738659/d05a6e39-db66-4db6-8a01-fc9ee5f741b3)
+
+**PMOS**
+
+![image](https://github.com/Nawras-Ahamed/SOC_PHYDESIGN_FLOW/assets/50738659/4a428f8f-8d94-4f3c-8bea-305d3333866c)
+
+**input(A) poly contact**
+![image](https://github.com/Nawras-Ahamed/SOC_PHYDESIGN_FLOW/assets/50738659/6661f92d-e5ba-48b8-9776-ee3196c6af84)
+
+**N-Diffusion**
+![image](https://github.com/Nawras-Ahamed/SOC_PHYDESIGN_FLOW/assets/50738659/21396b55-06dc-44ce-b287-a5ed7215f1a1)
+
+**P-diffusion**
+![image](https://github.com/Nawras-Ahamed/SOC_PHYDESIGN_FLOW/assets/50738659/a948415d-3d40-4ff4-98f4-4b58c57af836)
+
+### EXTRACTING THE SPICE NETLIST
+
+`Inside tkcon bash, while in the clone directory with .tech and .mag file `
+```bash
+extract all
+ext2spice cthresh 0 rthresh 0
+ext2spice
+```
+![image](https://github.com/Nawras-Ahamed/SOC_PHYDESIGN_FLOW/assets/50738659/8dd21810-3522-44e6-a1df-a4108977aedf)
+
+
+inside the `sky130_inv.ext` **WE CAN WITNESS THE EXTRACTED NETLIST INFORMATION**
+![image](https://github.com/Nawras-Ahamed/SOC_PHYDESIGN_FLOW/assets/50738659/897af63b-e29d-45e6-8c54-c32d8e05af57)
+
+
+
+
