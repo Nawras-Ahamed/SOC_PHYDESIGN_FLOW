@@ -479,5 +479,15 @@ inside the `sky130_inv.ext` **WE CAN WITNESS THE EXTRACTED NETLIST INFORMATION**
 ![image](https://github.com/Nawras-Ahamed/SOC_PHYDESIGN_FLOW/assets/50738659/897af63b-e29d-45e6-8c54-c32d8e05af57)
 
 
+**MODIFIED EXTRACTED SPICE NETLIST**
+![image](https://github.com/Nawras-Ahamed/SOC_PHYDESIGN_FLOW/assets/50738659/3ad94559-13c3-469a-85d2-467390fd09db)
+
+`The include files were present in the working directory`
+
+
+**SPICE SIMULATION RESULTS**
+![image](https://github.com/Nawras-Ahamed/SOC_PHYDESIGN_FLOW/assets/50738659/9536df2b-fae7-4b37-99ab-7b898cd6bdf7)
+
+
 
 
