@@ -377,7 +377,22 @@ Click on any cell and select it, Then press "S" which will open a tkcon window a
 ![image](https://github.com/Nawras-Ahamed/SOC_PHYDESIGN_FLOW/assets/50738659/1ec2757a-dbe7-4da3-9268-e750afdbd444)
 ___________________________________
 
+### PLACEMENT
+
+```run_placement```
+
+![image](https://github.com/Nawras-Ahamed/SOC_PHYDESIGN_FLOW/assets/50738659/da446621-1138-411b-8f50-725936b2b3e6)
+
+
+![image](https://github.com/Nawras-Ahamed/SOC_PHYDESIGN_FLOW/assets/50738659/1fbd4478-c13c-4ecb-b90f-91a73670a9ce)
 
 
 
+**PLACEMENT RESULTS**
+
+```home/vsduser/Desktop/work/tools/openlane_working_dir/openlane/designs/picorv32a/runs/16-05_05-22/results/placement/picorv32a.placement.def.png```
+![image](https://github.com/Nawras-Ahamed/SOC_PHYDESIGN_FLOW/assets/50738659/fa1278d2-0e85-4e23-a439-75d48a48f8e7)
+
+```~/Desktop/work/tools/openlane_working_dir/openlane/designs/picorv32a/runs/16-05_05-22/logs/placement/8-resizer.log```
+![image](https://github.com/Nawras-Ahamed/SOC_PHYDESIGN_FLOW/assets/50738659/f2b27172-4969-4079-9a9c-5fb5ad1bdb0b)
 
