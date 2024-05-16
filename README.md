@@ -286,15 +286,16 @@ DFF's\ percent  = Flop\ Ratio * 100 = 0.1084* 100 = 10.84\ \%
 
 **What's inside the README.md of Config files?**
 
-![image](https://github.com/Nawras-Ahamed/SOC_PHYDESIGN_FLOW/assets/50738659/0aa8ca1b-142e-4362-b82b-46ea2370a64e)
+![image](https://github.com/Nawras-Ahamed/SOC_PHYDESIGN_FLOW/assets/50738659/1351c213-2339-44c5-9517-25e89946a4cf)
 
-This gives a documentation the various settings are user can use by help of the switches.
-
-**I'll focus on the (FP_IO MODE)**
+This gives a documentation the various settings are user can use by help of the switches we we can set in the ```~/Desktop/work/tools/openlane_working_dir/openlane/configuration/floorplan.tcl```
 
 **Inside the floorplan.tcl**
 
 ![image](https://github.com/Nawras-Ahamed/SOC_PHYDESIGN_FLOW/assets/50738659/f11a1c5c-1c2b-4469-b910-5d0e3aa86425)
 
- (FP_IO MODE) 0 - pin positioning is random 
+ (FP_IO MODE) 0 - matching mode
  (FP_IO MODE) 1 - equidistance positioning
+
+
+ 
