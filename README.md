@@ -127,14 +127,14 @@ There are Two modes of operation: automonomous and interactive
 ### SKY130 PDK
 There are seven standard cell libraries provided directly by the SkyWater Technology foundry available for use on SKY130 designs, which differ in intended applications and come in three separate cell heights
 
-```<Process name> _ <Library Source Abbreviation> _ <Library Type Abbreviation> <Library Name>```	
+```<Process name>_<Source>_<Type>_<Density>```	
 
-sky130_fd_sc_hd.lib:
+here we hace used the sky130_fd_sc_hd.lib
 
-Sky130 : process technology.
-fd : SkyWater Foundry.
-sc : Digital Standard Cells.
-hd : High density.
+Sky130 : process technology (node)
+fd : SkyWater Foundry
+sc : Digital Standard Cells
+hd : High density
 
 ### USING OPENLANE
 
@@ -343,6 +343,14 @@ Area\ of\ die = 660.685 * 671.405 = 443587.212425\ Sq\ Microns
 ```
 
 ### Layout in Magic
+
+**INSIDE THE config.tcl**
+```
+~/Desktop/work/tools/openlane_working_dir/openlane/designs/picorv32a/config.tcl
+```
+![image](https://github.com/Nawras-Ahamed/SOC_PHYDESIGN_FLOW/assets/50738659/fff62f85-74ac-45ef-ab57-602a59e0e0a3)
+
+
 We need a lef and def file along with pdk's techfile into order to map accordingly and view the floorplan in the Magic
 ```bash
 magic -T /home/vsduser/Desktop/work/tools/openlane_working_dir/pdks/sky130A/libs.tech/magic/sky130A.tech lef read ../../tmp/merged.lef def read picorv32a.floorplan.def &
@@ -367,6 +375,9 @@ Click on any cell and select it, Then press "S" which will open a tkcon window a
 
 **Standard cells placed at the bottom of the layout**
 ![image](https://github.com/Nawras-Ahamed/SOC_PHYDESIGN_FLOW/assets/50738659/1ec2757a-dbe7-4da3-9268-e750afdbd444)
+___________________________________
+
+
 
 
 
