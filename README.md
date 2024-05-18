@@ -543,6 +543,43 @@ magic -d XR &
 
 ![image](https://github.com/Nawras-Ahamed/SOC_PHYDESIGN_FLOW/assets/50738659/be599bed-f892-4861-bb99-136e61d59320)
 
+[Sky130 Periphery Rules](https://skywater-pdk.readthedocs.io/en/main/rules/periphery.html)
+__________________________________________________
+
+### Fixing poly.9 error in Sky130 tech-file
+
+![image](https://github.com/Nawras-Ahamed/SOC_PHYDESIGN_FLOW/assets/50738659/2513ca14-4538-47b5-8eaa-f05666a8d15d)
+
+```bash
+gvim sky130A.tech
+```
+
+![image](https://github.com/Nawras-Ahamed/SOC_PHYDESIGN_FLOW/assets/50738659/39074ad8-c222-49f4-9fa0-52d33800dd6b)
+
+`change to allpolynonres`
+![image](https://github.com/Nawras-Ahamed/SOC_PHYDESIGN_FLOW/assets/50738659/c0546763-1e77-490b-b9d9-143048a9b679)
+
+
+![image](https://github.com/Nawras-Ahamed/SOC_PHYDESIGN_FLOW/assets/50738659/1f05582f-4ad1-401d-a1ec-6e4f20853a07)
+
+
+### implement poly resistor spacing to diffusion and tap
+
+```
+add this line 
+spacing xhrpoly,uhrpoly,xpc allpolynonres 480 touching illegal \
+    "xhrpoly/uhrpoly resistor spacing to diffusion < %d (poly.9)"
+```
+![image](https://github.com/Nawras-Ahamed/SOC_PHYDESIGN_FLOW/assets/50738659/14b752d0-cdee-4d03-b9cc-f119baae7ef9)
+
+<br>
+
+![image](https://github.com/Nawras-Ahamed/SOC_PHYDESIGN_FLOW/assets/50738659/48469e08-0da6-4cc0-a880-ad6b68735bbb)
+
+<br>
+
+![image](https://github.com/Nawras-Ahamed/SOC_PHYDESIGN_FLOW/assets/50738659/b6c0403f-8b55-4b2f-b7e1-eb9415acbf1e)
+
 
 
 
