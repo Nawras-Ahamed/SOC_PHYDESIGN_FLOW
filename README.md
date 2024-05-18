@@ -536,5 +536,13 @@ magic -d XR &
 `launching magic`
 ![image](https://github.com/Nawras-Ahamed/SOC_PHYDESIGN_FLOW/assets/50738659/662a4e3c-a2d5-4ca6-8a00-ab5c8e2969d2)
 
+`open met3.mag`
+![image](https://github.com/Nawras-Ahamed/SOC_PHYDESIGN_FLOW/assets/50738659/92f4328b-5082-465e-b346-f2257d0a5d7a)
+
+![image](https://github.com/Nawras-Ahamed/SOC_PHYDESIGN_FLOW/assets/50738659/1ec9e6ae-6be0-42f8-85cc-a15b213fc596)
+
+![image](https://github.com/Nawras-Ahamed/SOC_PHYDESIGN_FLOW/assets/50738659/be599bed-f892-4861-bb99-136e61d59320)
+
+
 
 
