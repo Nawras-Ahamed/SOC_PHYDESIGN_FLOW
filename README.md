@@ -521,4 +521,20 @@ x0 = 4.06051e-09, y0 = 1.65147 \  \
 x0 = 4.05492e-09, y0 = 1.65
 ```
 
+### DRC ERRORS AND TECH FILE - AN OVERVIEW
+
+```bash
+wget http://opencircuitdesign.com/open_pdks/archive/drc_tests.tgz
+tar xfz drc_tests.tgz
+cd drc_tests
+gvim .magicrc
+magic -d XR &
+```
+`magicrc`
+![image](https://github.com/Nawras-Ahamed/SOC_PHYDESIGN_FLOW/assets/50738659/324d75d3-1132-4938-a85d-f38d6f53df33)
+
+`launching magic`
+![image](https://github.com/Nawras-Ahamed/SOC_PHYDESIGN_FLOW/assets/50738659/662a4e3c-a2d5-4ca6-8a00-ab5c8e2969d2)
+
+
 
