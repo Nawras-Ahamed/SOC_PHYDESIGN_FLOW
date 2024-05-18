@@ -523,6 +523,8 @@ x0 = 4.05492e-09, y0 = 1.65
 
 ### DRC ERRORS AND TECH FILE - AN OVERVIEW
 
+[Sky130 Periphery Rules](https://skywater-pdk.readthedocs.io/en/main/rules/periphery.html)
+
 ```bash
 wget http://opencircuitdesign.com/open_pdks/archive/drc_tests.tgz
 tar xfz drc_tests.tgz
@@ -543,7 +545,7 @@ magic -d XR &
 
 ![image](https://github.com/Nawras-Ahamed/SOC_PHYDESIGN_FLOW/assets/50738659/be599bed-f892-4861-bb99-136e61d59320)
 
-[Sky130 Periphery Rules](https://skywater-pdk.readthedocs.io/en/main/rules/periphery.html)
+
 __________________________________________________
 
 ### Fixing poly.9 error in Sky130 tech-file
@@ -581,5 +583,55 @@ spacing xhrpoly,uhrpoly,xpc allpolynonres 480 touching illegal \
 ![image](https://github.com/Nawras-Ahamed/SOC_PHYDESIGN_FLOW/assets/50738659/b6c0403f-8b55-4b2f-b7e1-eb9415acbf1e)
 
 
+
+### Describing DRC error as Geometrical Construct
+
+`open > nwell.mag`
+<br>
+
+![image](https://github.com/Nawras-Ahamed/SOC_PHYDESIGN_FLOW/assets/50738659/5aa1d43a-53fe-407c-9164-0a9a487871fd)
+
+
+```
+% cif ostyle drc
+% cif see dnwell_shrink
+% feed clear
+% cif see nwell_missing
+% feed clear
+```
+
+![image](https://github.com/Nawras-Ahamed/SOC_PHYDESIGN_FLOW/assets/50738659/842d07b2-ebf9-4ed6-8577-e20a8033c472)
+
+![image](https://github.com/Nawras-Ahamed/SOC_PHYDESIGN_FLOW/assets/50738659/5d1742fc-7597-4b2d-8a29-15725c9946f7)
+
+### Finding missing or incorrect Rules
+
+![image](https://github.com/Nawras-Ahamed/SOC_PHYDESIGN_FLOW/assets/50738659/d1c276f4-1246-43cb-acf7-ae3534f1634a)
+
+```
+ variants (full)
+  cifmaxwidth nwell_untapped 0 bend_illegal \
+  "Nwell missing tap (nwell.4)"
+
+ variants *
+ ```
+
+![image](https://github.com/Nawras-Ahamed/SOC_PHYDESIGN_FLOW/assets/50738659/14ee1893-9b36-4c3f-8e78-6f8ccffc23f9)
+
+
+```
+ templayer nwell_tapped
+ bloat-all nsc nwell
+
+ templayer nwell_untapped nwell
+ and-not nwell_tapped
+
+```
+
+![image](https://github.com/Nawras-Ahamed/SOC_PHYDESIGN_FLOW/assets/50738659/430b9847-13c3-4968-95ff-1efb22f17ae4)
+
+`now we can see the mistake in the implementation from the drc checker`
+
+![image](https://github.com/Nawras-Ahamed/SOC_PHYDESIGN_FLOW/assets/50738659/e32bb292-f9f5-49ac-acd1-f66e812f25db)
 
 
