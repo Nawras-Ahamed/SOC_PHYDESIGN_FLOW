@@ -759,8 +759,13 @@ run_placement
 ```
 
 ![image](https://github.com/Nawras-Ahamed/SOC_PHYDESIGN_FLOW/assets/50738659/634f8001-b9d3-40ae-bbb2-d0c789131c74)
+
+
 ![image](https://github.com/Nawras-Ahamed/SOC_PHYDESIGN_FLOW/assets/50738659/27916472-4920-4546-b183-9f33fe6c4ce1)
 
+<br>
+
+![image](https://github.com/Nawras-Ahamed/SOC_PHYDESIGN_FLOW/assets/50738659/80993a93-b03a-4b70-a348-e2efe48c418b)
 
 ![image](https://github.com/Nawras-Ahamed/SOC_PHYDESIGN_FLOW/assets/50738659/36febaea-b782-4222-b165-6c9fff27f6eb)
 ________________________________________________________________________________________________________________
@@ -784,6 +789,7 @@ ________________________________________________
 ### STATIC TIMING ANALYSIS using OpenSTA
 
 *POST SYNTHESIS TIMING ANALYSIS*
+
 
 
 
