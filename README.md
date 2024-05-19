@@ -298,7 +298,9 @@ This gives a documentation the various settings are user can use by help of the 
  (FP_IO MODE) 1 - equidistance positioning
 
 In the openlane interactive mode
-```run_floorplan```
+```tcl
+run_floorplan
+```
 ![image](https://github.com/Nawras-Ahamed/SOC_PHYDESIGN_FLOW/assets/50738659/ba478d2b-8b7c-45f3-932f-40463c6604e4)
 
 **floorplan.def was updated as shown in the below image**
@@ -413,7 +415,7 @@ magic -T /home/vsduser/Desktop/work/tools/openlane_working_dir/pdks/sky130A/libs
 ![image](https://github.com/Nawras-Ahamed/SOC_PHYDESIGN_FLOW/assets/50738659/39c58e23-252b-4b8c-b71d-e741a50e21de)
 
 In the openlane interactive window 
-```bash
+```tcl
 set ::env(FP_IO_MODE) 2
 ```
 
@@ -467,7 +469,7 @@ As a CMOS Inverter is Intended to be, The source of NMOS,PMOS are connected to t
 ### EXTRACTING THE SPICE NETLIST
 
 `Inside tkcon bash, while in the clone directory with .tech and .mag file `
-```bash
+```tcl
 extract all
 ext2spice cthresh 0 rthresh 0
 ext2spice
@@ -568,7 +570,7 @@ gvim sky130A.tech
 ### implement poly resistor spacing to diffusion and tap
 
 ```
-add this line 
+add this line---------------------
 spacing xhrpoly,uhrpoly,xpc allpolynonres 480 touching illegal \
     "xhrpoly/uhrpoly resistor spacing to diffusion < %d (poly.9)"
 ```
@@ -592,12 +594,12 @@ spacing xhrpoly,uhrpoly,xpc allpolynonres 480 touching illegal \
 ![image](https://github.com/Nawras-Ahamed/SOC_PHYDESIGN_FLOW/assets/50738659/5aa1d43a-53fe-407c-9164-0a9a487871fd)
 
 
-```
-% cif ostyle drc
-% cif see dnwell_shrink
-% feed clear
-% cif see nwell_missing
-% feed clear
+``` tcl
+cif ostyle drc
+cif see dnwell_shrink
+feed clear
+cif see nwell_missing
+feed clear
 ```
 
 ![image](https://github.com/Nawras-Ahamed/SOC_PHYDESIGN_FLOW/assets/50738659/842d07b2-ebf9-4ed6-8577-e20a8033c472)
@@ -652,7 +654,7 @@ As a rule, the output port and input port of the cell has to be placed in such a
 ![image](https://github.com/Nawras-Ahamed/SOC_PHYDESIGN_FLOW/assets/50738659/9fce6aca-ed2e-4059-b9cd-fa618ca7e788)
 
 *To set the grid size*
-```bash
+```tcl
 grid 0.46um 0.34um 0.23um 0.17um
 ```
 
@@ -664,6 +666,23 @@ grid 0.46um 0.34um 0.23um 0.17um
 **importing with custom lef**
 ![image](https://github.com/Nawras-Ahamed/SOC_PHYDESIGN_FLOW/assets/50738659/4a091c85-7fbb-40c5-8cef-f7cbe9741df0)
 
+
+### Adding my custom inverter cell
+<br>
+
+ `BEFORE MAKING ANY CHANGES`
+<br>
+`run_synthesis`
+
+![image](https://github.com/Nawras-Ahamed/SOC_PHYDESIGN_FLOW/assets/50738659/fe1632d2-5982-40fc-87b1-eba67c6a2c2f)
+
+<br>
+
+`run_floorplan + run_synthesis`
+
+![image](https://github.com/Nawras-Ahamed/SOC_PHYDESIGN_FLOW/assets/50738659/91ca7c54-cfc8-4ac6-9d97-bfea9c0acaf8)
+
+
 `Copy the necessary files to the source directory`1
 
 ```bash
@@ -674,4 +693,97 @@ cp libs/sky130_fd_sc_hd__* ~/Desktop/work/tools/openlane_working_dir/openlane/de
 
 ![image](https://github.com/Nawras-Ahamed/SOC_PHYDESIGN_FLOW/assets/50738659/876554ef-8049-4a47-8584-c5844ccd9907)
 
-###
+<br>
+
+`add the below lines to the config.tcl in the picorv32a directory`
+
+```tcl
+set ::env(LIB_SYNTH) "$::env(OPENLANE_ROOT)/designs/picorv32a/src/sky130_fd_sc_hd__typical.lib"
+set ::env(LIB_FASTEST) "$::env(OPENLANE_ROOT)/designs/picorv32a/src/sky130_fd_sc_hd__fast.lib"
+set ::env(LIB_SLOWEST) "$::env(OPENLANE_ROOT)/designs/picorv32a/src/sky130_fd_sc_hd__slow.lib"
+set ::env(LIB_TYPICAL) "$::env(OPENLANE_ROOT)/designs/picorv32a/src/sky130_fd_sc_hd__typical.lib"
+
+set ::env(EXTRA_LEFS) [glob $::env(OPENLANE_ROOT)/designs/$::env(DESIGN_NAME)/src/*.lef]
+```
+![image](https://github.com/Nawras-Ahamed/SOC_PHYDESIGN_FLOW/assets/50738659/57b5b5be-7365-4fe8-9d3f-e181d18ff41a)
+
+`invoke openlane and start with the latest run`
+<br>
+
+![image](https://github.com/Nawras-Ahamed/SOC_PHYDESIGN_FLOW/assets/50738659/7d7d99d9-c665-4d55-81f2-64201efbb631)
+
+`set the design directory from the interactive window itself and synthesis`
+
+![image](https://github.com/Nawras-Ahamed/SOC_PHYDESIGN_FLOW/assets/50738659/a56de26f-37c3-4518-92ab-01cfca7044f5)
+
+`CHIP AREA`
+![image](https://github.com/Nawras-Ahamed/SOC_PHYDESIGN_FLOW/assets/50738659/8563356d-1d39-4703-a721-b26bc773018f)
+
+`Timing Report`
+![image](https://github.com/Nawras-Ahamed/SOC_PHYDESIGN_FLOW/assets/50738659/e448b8cb-a2b9-41e9-b0d0-ab9379b5b21d)
+
+![image](https://github.com/Nawras-Ahamed/SOC_PHYDESIGN_FLOW/assets/50738659/74d5a825-b0b1-47e9-90c0-281feeb0d705)
+
+`Modifications inorder to reduce the slack violations`
+
+```tcl
+prep -design picorv32a -tag 16-05_24-24 -overwrite
+set lefs [glob $::env(DESIGN_DIR)/src/*.lef]
+echo $::env(SYNTH_STRATEGY) # display current value of variable SYNTH_STRATEGY
+set ::env(SYNTH_STRATEGY) "DELAY 3" #  set new value for SYNTH_STRATEGY
+echo $::env(SYNTH_BUFFERING)#  display current value of variable SYNTH_BUFFERING
+echo $::env(SYNTH_SIZING) # display current value of variable SYNTH_SIZING
+set ::env(SYNTH_SIZING) 1 # set new value for SYNTH_SIZING
+echo $::env(SYNTH_DRIVING_CELL) # display current value of SYNTH_DRIVING_CELL 
+run_synthesis
+```
+`can see the custom vsd inverter cell`
+
+![image](https://github.com/Nawras-Ahamed/SOC_PHYDESIGN_FLOW/assets/50738659/41575e88-85aa-40ce-976e-ba628361dce0)
+
+`run_floorplan`
+![image](https://github.com/Nawras-Ahamed/SOC_PHYDESIGN_FLOW/assets/50738659/8a6ce9d5-b1c9-4846-b1be-7e473c59750f)
+
+`run_placement`
+![image](https://github.com/Nawras-Ahamed/SOC_PHYDESIGN_FLOW/assets/50738659/63e09cf8-a780-4503-b7f0-864d14debe03)
+____________________________________________________________________________
+### ISSUES I FACED
+Due to failed flow i had to manually
+![image](https://github.com/Nawras-Ahamed/SOC_PHYDESIGN_FLOW/assets/50738659/f7188808-8e7c-4cbf-8207-1b48fb3bc91e)
+
+```bash
+init_floorplan
+place_io
+tap_decap_or
+run_placement
+```
+
+![image](https://github.com/Nawras-Ahamed/SOC_PHYDESIGN_FLOW/assets/50738659/634f8001-b9d3-40ae-bbb2-d0c789131c74)
+![image](https://github.com/Nawras-Ahamed/SOC_PHYDESIGN_FLOW/assets/50738659/27916472-4920-4546-b183-9f33fe6c4ce1)
+
+
+![image](https://github.com/Nawras-Ahamed/SOC_PHYDESIGN_FLOW/assets/50738659/36febaea-b782-4222-b165-6c9fff27f6eb)
+________________________________________________________________________________________________________________
+
+
+```bash
+cd Desktop/work/tools/openlane_working_dir/openlane/designs/picorv32a/runs/19-05_10-06/results/placement/
+magic -T /home/vsduser/Desktop/work/tools/openlane_working_dir/pdks/sky130A/libs.tech/magic/sky130A.tech lef read ../../tmp/merged.lef def read picorv32a.placement.def &
+```
+`picorv32a/runs/19-05_10-06/results/placement/picorv32a.placement.def.png`
+
+`tmp/merged.lef`
+![image](https://github.com/Nawras-Ahamed/SOC_PHYDESIGN_FLOW/assets/50738659/831440f7-4cfb-48d7-8355-77bfaedbfd6e)
+
+<br>
+
+![image](https://github.com/Nawras-Ahamed/SOC_PHYDESIGN_FLOW/assets/50738659/8ed78fa3-0750-4484-9aff-23a69a75149e)
+<br>
+________________________________________________
+
+### STATIC TIMING ANALYSIS using OpenSTA
+
+*POST SYNTHESIS TIMING ANALYSIS*
+
+
+
