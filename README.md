@@ -634,4 +634,44 @@ spacing xhrpoly,uhrpoly,xpc allpolynonres 480 touching illegal \
 
 ![image](https://github.com/Nawras-Ahamed/SOC_PHYDESIGN_FLOW/assets/50738659/e32bb292-f9f5-49ac-acd1-f66e812f25db)
 
+___________________________________________
 
+### PRE LAYOUT TIMING ANALYSIS
+
+We need to extract the track information first and set the grid view of the layout according to the track pitch x and y values 
+
+As a rule, the output port and input port of the cell has to be placed in such a position that it is in the intersection of both the x and y axis of the tracks
+
+`grid x-spacing y-spacing x-orgin y-origin` the local interconnect information can be found from 
+
+`/Desktop/work/tools/openlane_working_dir/pdks/sky130A/libs.tech/openlane/sky130_fd_sc_hd`
+
+**Width of the standard cell should be odd multiples of the horizontal track pitch**
+**Height of the standard cell should be even multiples of the vertical track pitch**
+
+![image](https://github.com/Nawras-Ahamed/SOC_PHYDESIGN_FLOW/assets/50738659/9fce6aca-ed2e-4059-b9cd-fa618ca7e788)
+
+*To set the grid size*
+```bash
+grid 0.46um 0.34um 0.23um 0.17um
+```
+
+![image](https://github.com/Nawras-Ahamed/SOC_PHYDESIGN_FLOW/assets/50738659/a35121e8-a22b-4f05-8495-4b0c8d2ddc8f)
+
+`after settign the grid size based on the track pitch`
+![image](https://github.com/Nawras-Ahamed/SOC_PHYDESIGN_FLOW/assets/50738659/534cb4cb-ac2a-48d0-a9f5-a6847a251886)
+
+**importing with custom lef**
+![image](https://github.com/Nawras-Ahamed/SOC_PHYDESIGN_FLOW/assets/50738659/4a091c85-7fbb-40c5-8cef-f7cbe9741df0)
+
+`Copy the necessary files to the source directory`1
+
+```bash
+cp sky130_nawras_inv.lef ~/Desktop/work/tools/openlane_working_dir/openlane/designs/picorv32a/src/
+
+cp libs/sky130_fd_sc_hd__* ~/Desktop/work/tools/openlane_working_dir/openlane/designs/picorv32a/src/
+```
+
+![image](https://github.com/Nawras-Ahamed/SOC_PHYDESIGN_FLOW/assets/50738659/876554ef-8049-4a47-8584-c5844ccd9907)
+
+###
