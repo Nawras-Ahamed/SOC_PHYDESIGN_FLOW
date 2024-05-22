@@ -1029,9 +1029,41 @@ exit
 
 _______________________
 
-### Post CTS OpenROAD timing analysis, removing 'sky130_fd_sc_hd__clkbuf_1' cell from clock buffer list variable of 'CTS_CLK_BUFFER_LIST'
+_______________________
+
+### Generation of Power Distribution Network (PDN) and explore the PDN layout.
+
+```bash
+./flow.tcl -interactive
+
+package require openlane 0.9
+
+prep -design picorv32a
+
+set lefs [glob $::env(DESIGN_DIR)/src/*.lef]
+add_lefs -src $lefs
+
+set ::env(SYNTH_STRATEGY) "DELAY 3"
+
+set ::env(SYNTH_SIZING) 1
+
+run_synthesis
+init_floorplan
+place_io
+tap_decap_or
+run_placement
+unset ::env(LIB_CTS)
+run_cts
+
+# Now that CTS is done we can do power distribution network
+gen_pdn 
+```
+
+![image](https://github.com/Nawras-Ahamed/SOC_PHYDESIGN_FLOW/assets/50738659/dca24833-2fe4-4de3-9b43-c8c00ce1d692)
+![image](https://github.com/Nawras-Ahamed/SOC_PHYDESIGN_FLOW/assets/50738659/dc8f664a-073c-47f3-bdd1-34143852962a)
 
 
+after completion of pdn
 
-
+![image](https://github.com/Nawras-Ahamed/SOC_PHYDESIGN_FLOW/assets/50738659/6a648922-bd61-4c1d-a36c-d1d2477d60b8)
 
