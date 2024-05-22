@@ -1067,3 +1067,18 @@ after completion of pdn
 
 ![image](https://github.com/Nawras-Ahamed/SOC_PHYDESIGN_FLOW/assets/50738659/6a648922-bd61-4c1d-a36c-d1d2477d60b8)
 
+```bash
+cd Desktop/work/tools/openlane_working_dir/openlane/designs/picorv32a/runs/22-05_18-27/tmp/floorplan/
+
+magic -T /home/vsduser/Desktop/work/tools/openlane_working_dir/pdks/sky130A/libs.tech/magic/sky130A.tech lef read ../../tmp/merged.lef def read 19-pdn.def &
+```
+![image](https://github.com/Nawras-Ahamed/SOC_PHYDESIGN_FLOW/assets/50738659/7e7f93f5-a7a9-427c-bce5-b973075fc7f2)
+____________________________
+
+### DETAILED ROUTING USIGN TRITON ROUTE 
+
+```bash
+cd Desktop/work/tools/openlane_working_dir/openlane/designs/picorv32a/runs/22-05_18-27/results/routing/
+
+magic -T /home/vsduser/Desktop/work/tools/openlane_working_dir/pdks/sky130A/libs.tech/magic/sky130A.tech lef read ../../tmp/merged.lef def read picorv32a.def &
+```
