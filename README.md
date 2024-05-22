@@ -878,5 +878,27 @@ echo $::env(SYNTH_DRIVING_CELL)
 run_synthesis
 ```
 
+`Lesser drive Strength OR2 Gate has a Fanout 4`
+![image](https://github.com/Nawras-Ahamed/SOC_PHYDESIGN_FLOW/assets/50738659/8c1ab9d1-2d9e-4e2f-9e45-d24659a0a2a3)
+
+### Commands to perform analysis and optimize timing by replacing the OR Gate
+
+```bash
+report_net -connections  _10911_
+replace _13691_ sky130_fd_sc_hd__or3_4
+report_checks -fields {net cap slew input_pins} -digits 4
+```
+
+![image](https://github.com/Nawras-Ahamed/SOC_PHYDESIGN_FLOW/assets/50738659/20507f2a-50cb-45da-8808-d5275cdbfd8b)
+![image](https://github.com/Nawras-Ahamed/SOC_PHYDESIGN_FLOW/assets/50738659/2e923184-37bd-4b37-a3f7-b4197dc2c72e)
+
+```bash
+report_net -connections  _10566_
+replace _13165_ sky130_fd_sc_hd__or3_4
+report_checks -fields {net cap slew input_pins} -digits 4
+```
+
+
+![image](https://github.com/Nawras-Ahamed/SOC_PHYDESIGN_FLOW/assets/50738659/b017bb79-22e2-4fc4-877b-1c72d73ca204)
 
 
