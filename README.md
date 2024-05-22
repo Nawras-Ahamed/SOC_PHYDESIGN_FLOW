@@ -990,6 +990,37 @@ _____________________________
 
 ### POST-CTS Timing Analysis
 
+Performing timing analysis with the integrated OpenSTA with Openlane
+
+```bash
+openroad
+
+read_lef /openLANE_flow/designs/picorv32a/runs/22-05_16-17/tmp/merged.lef
+
+read_def /openLANE_flow/designs/picorv32a/runs/22-05_16-17/results/cts/picorv32a.cts.def
+
+write_db pico_cts.db
+
+read_db pico_cts.db
+
+# Read netlist post CTS
+read_verilog /openLANE_flow/designs/picorv32a/runs/24-03_10-03/results/synthesis/picorv32a.synthesis_cts.v
+
+# Read library for design
+read_liberty $::env(LIB_SYNTH_COMPLETE)
+
+# Link design and library
+link_design picorv32a
+
+read_sdc /openLANE_flow/designs/picorv32a/src/my_base.sdc
+set_propagated_clock [all_clocks]
+help report_checks
+
+
+report_checks -path_delay min_max -fields {slew trans net cap input_pins} -format full_clock_expanded -digits 4
+exit
+```
+
 
 
 
