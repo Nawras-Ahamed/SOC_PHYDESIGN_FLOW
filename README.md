@@ -986,11 +986,16 @@ run_cts
 
 ![image](https://github.com/Nawras-Ahamed/SOC_PHYDESIGN_FLOW/assets/50738659/e3c2977c-8683-4dcf-a220-71e2ffaea8a9)
 
+`CHECKS`
+![image](https://github.com/Nawras-Ahamed/SOC_PHYDESIGN_FLOW/assets/50738659/eb91f5ca-4052-47ae-8e5c-54998133b5e8)
+
+
 _____________________________
+
 
 ### POST-CTS Timing Analysis
 
-Performing timing analysis with the integrated OpenSTA with Openlane
+Performing timing analysis with the integrated OpenSTA with OpenRoad
 
 ```bash
 openroad
@@ -1004,7 +1009,7 @@ write_db pico_cts.db
 read_db pico_cts.db
 
 # Read netlist post CTS
-read_verilog /openLANE_flow/designs/picorv32a/runs/24-03_10-03/results/synthesis/picorv32a.synthesis_cts.v
+read_verilog /openLANE_flow/designs/picorv32a/runs/22-05_16-17/results/synthesis/picorv32a.synthesis_cts.v
 
 # Read library for design
 read_liberty $::env(LIB_SYNTH_COMPLETE)
@@ -1020,6 +1025,8 @@ help report_checks
 report_checks -path_delay min_max -fields {slew trans net cap input_pins} -format full_clock_expanded -digits 4
 exit
 ```
+
+
 
 
 
