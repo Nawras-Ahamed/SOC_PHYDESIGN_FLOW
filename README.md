@@ -859,6 +859,24 @@ set_load  $cap_load [all_outputs]
 
 ![image](https://github.com/Nawras-Ahamed/SOC_PHYDESIGN_FLOW/assets/50738659/2219f5d8-909c-46a6-be41-46de4ca672f1)
 
+![image](https://github.com/Nawras-Ahamed/SOC_PHYDESIGN_FLOW/assets/50738659/361cf8f7-2e4f-4df2-b5fa-201a968d5d49)
+`Since more fanout is causing more delay we can add parameter to reduce fanout and do synthesis again`
+
+```bash
+
+prep -design picorv32a -tag 19-05_12-54 -overwrite
+
+set lefs [glob $::env(DESIGN_DIR)/src/*.lef]
+add_lefs -src $lefs
+
+set ::env(SYNTH_SIZING) 1
+
+set ::env(SYNTH_MAX_FANOUT) 4
+
+echo $::env(SYNTH_DRIVING_CELL)
+
+run_synthesis
+```
 
 
 
