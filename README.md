@@ -989,13 +989,14 @@ run_cts
 `CHECKS`
 ![image](https://github.com/Nawras-Ahamed/SOC_PHYDESIGN_FLOW/assets/50738659/eb91f5ca-4052-47ae-8e5c-54998133b5e8)
 
-
+`SETTING SOME VARIABLES and run_cts`
+![image](https://github.com/Nawras-Ahamed/SOC_PHYDESIGN_FLOW/assets/50738659/9b26edcd-bda5-4210-8091-3c70a7c4a018)
 _____________________________
 
 
 ### POST-CTS Timing Analysis
 
-Performing timing analysis with the integrated OpenSTA with OpenRoad
+Performing timing analysis with the integrated OpenSTA with OpenRoad inside the Openlane bash
 
 ```bash
 openroad
@@ -1019,18 +1020,16 @@ link_design picorv32a
 
 read_sdc /openLANE_flow/designs/picorv32a/src/my_base.sdc
 set_propagated_clock [all_clocks]
-help report_checks
-
 
 report_checks -path_delay min_max -fields {slew trans net cap input_pins} -format full_clock_expanded -digits 4
 exit
 ```
 
+![image](https://github.com/Nawras-Ahamed/SOC_PHYDESIGN_FLOW/assets/50738659/83085222-a4f0-4ee2-8f15-1cd87dd4fc78)
 
+_______________________
 
-
-
-
+### Post CTS OpenROAD timing analysis, removing 'sky130_fd_sc_hd__clkbuf_1' cell from clock buffer list variable of 'CTS_CLK_BUFFER_LIST'
 
 
 
