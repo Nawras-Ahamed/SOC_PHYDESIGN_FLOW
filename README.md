@@ -901,4 +901,71 @@ report_checks -fields {net cap slew input_pins} -digits 4
 
 ![image](https://github.com/Nawras-Ahamed/SOC_PHYDESIGN_FLOW/assets/50738659/b017bb79-22e2-4fc4-877b-1c72d73ca204)
 
+`OR4 gate of drive strength 2 driving OA gate has delay`
+![image](https://github.com/Nawras-Ahamed/SOC_PHYDESIGN_FLOW/assets/50738659/24ce7882-3b37-4cf0-a716-a629f64a765a)
+
+```bash
+% report_net -connections _10534_
+Net _10534_
+Driver pins
+ _13132_/X output (sky130_fd_sc_hd__or4_2)
+
+Load pins
+ _13160_/A1 input (sky130_fd_sc_hd__o2111a_2)
+
+% replace_cell _13132_ sky130_fd_sc_hd__or4_4        
+1
+% report_checks -fields {net cap slew input_pins} -digits 4
+```
+![image](https://github.com/Nawras-Ahamed/SOC_PHYDESIGN_FLOW/assets/50738659/3719a0de-ac5f-4e67-87af-8ebc28fb31f5)
+
+`replacing with OR gate of drive strength 4`
+
+![image](https://github.com/Nawras-Ahamed/SOC_PHYDESIGN_FLOW/assets/50738659/fd8818b9-85e0-4361-b63c-c3203b2e6631)
+
+```bash
+% report_net -connections _10566_
+Net _10566_
+Driver pins
+ _13165_/X output (sky130_fd_sc_hd__or3_4)
+
+Load pins
+ _13166_/A input (sky130_vsdinv)
+ _13167_/B2 input (sky130_fd_sc_hd__o221a_2)
+ _13287_/B input (sky130_fd_sc_hd__or2_2)
+ _13690_/B input (sky130_fd_sc_hd__or2_2)
+
+% replace_cell _13690_ sky130_fd_sc_hd__or2_4
+1
+% report_checks -fields {net cap slew input_pins} -digits 4
+
+```
+![image](https://github.com/Nawras-Ahamed/SOC_PHYDESIGN_FLOW/assets/50738659/8902fec0-1a5d-498e-ada7-99b3e356849f)
+
+After ECO we have reduced -23.89 to -22.9259 = 0.9641ns reduced
+________________________________
+
+### Replace the old netlist with the new netlist generated after timing ECO
+
+```bash
+cd Desktop/work/tools/openlane_working_dir/openlane/designs/picorv32a/runs/22-05_16-17/results/synthesis/
+cp picorv32a.synthesis.v picorv32a.synthesis_old.v
+```
+
+```tcl
+help write_verilog
+write_verilog /home/vsduser/Desktop/work/tools/openlane_working_dir/openlane/designs/picorv32a/runs/22-05_16-17/results/synthesis/picorv32a.synthesis.v
+exit
+```
+![image](https://github.com/Nawras-Ahamed/SOC_PHYDESIGN_FLOW/assets/50738659/aa728a3a-962b-4fad-9655-4f3f098a38e2)
+
+_____________________________
+
+
+
+
+
+
+
+
 
