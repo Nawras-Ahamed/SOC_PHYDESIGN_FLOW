@@ -1075,10 +1075,61 @@ magic -T /home/vsduser/Desktop/work/tools/openlane_working_dir/pdks/sky130A/libs
 ![image](https://github.com/Nawras-Ahamed/SOC_PHYDESIGN_FLOW/assets/50738659/7e7f93f5-a7a9-427c-bce5-b973075fc7f2)
 ____________________________
 
-### DETAILED ROUTING USIGN TRITON ROUTE 
+
 
 ```bash
 cd Desktop/work/tools/openlane_working_dir/openlane/designs/picorv32a/runs/22-05_18-27/results/routing/
 
 magic -T /home/vsduser/Desktop/work/tools/openlane_working_dir/pdks/sky130A/libs.tech/magic/sky130A.tech lef read ../../tmp/merged.lef def read picorv32a.def &
 ```
+
+### DETAILED ROUTING USIGN TRITON ROUTE 
+
+```bash
+% echo $::env(CURRENT_DEF)
+/openLANE_flow/designs/picorv32a/runs/22-05_18-27/tmp/floorplan/14-pdn.def
+% run_routing
+```
+![image](https://github.com/Nawras-Ahamed/SOC_PHYDESIGN_FLOW/assets/50738659/e21384c5-ad92-44d4-bcce-f4e0f3ede672)
+
+<br>
+
+![image](https://github.com/Nawras-Ahamed/SOC_PHYDESIGN_FLOW/assets/50738659/86098240-a979-4188-855d-ff19ab9180c4)
+
+<br>
+
+![image](https://github.com/Nawras-Ahamed/SOC_PHYDESIGN_FLOW/assets/50738659/54904add-480f-47df-a71a-109b6e8e9b49)
+
+<br>
+
+![image](https://github.com/Nawras-Ahamed/SOC_PHYDESIGN_FLOW/assets/50738659/8d760b5a-3d5b-4272-a0b9-18ded0ed29b4)
+
+`ROUTING COMPLETED`
+![image](https://github.com/Nawras-Ahamed/SOC_PHYDESIGN_FLOW/assets/50738659/9d9bb453-9b87-484c-a8f1-1710cc4a54d0)
+
+<br>
+
+![image](https://github.com/Nawras-Ahamed/SOC_PHYDESIGN_FLOW/assets/50738659/27fd1e00-8015-4b25-b774-c5c47f5919c9)
+
+![image](https://github.com/Nawras-Ahamed/SOC_PHYDESIGN_FLOW/assets/50738659/06d72076-2de9-4114-80b6-7153caed127b)
+
+![image](https://github.com/Nawras-Ahamed/SOC_PHYDESIGN_FLOW/assets/50738659/7c9dd2fa-0175-45ab-8e44-f51ed9afd25a)
+
+___________________________________
+
+### POST-ROUTING PARASITIC EXTRACTION
+
+SPEF EXTRACTOR IS USED FOR PARASITIC EXTRACTION AFTER THE ROUTING, we can see the SPEF extractor work during the routing step and hence we have the SPEF file located in the routing directory itself
+
+![image](https://github.com/Nawras-Ahamed/SOC_PHYDESIGN_FLOW/assets/50738659/12bbec44-3187-4554-83aa-c7fdf16b460b)
+
+`inside picorv32a.spef`
+![image](https://github.com/Nawras-Ahamed/SOC_PHYDESIGN_FLOW/assets/50738659/425fb8b8-37ef-43db-9721-25d615591aa9)
+
+
+### FINAL DEF
+`inside /results/routing/picorv32a.def.png`
+![image](https://github.com/Nawras-Ahamed/SOC_PHYDESIGN_FLOW/assets/50738659/0e6225af-67eb-4815-b471-c9295bffa71d)
+
+
+
